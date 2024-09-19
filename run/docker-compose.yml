@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  cmd-services:
+    image: "${IMAGE_QUALIFIED_NAME}"
+    networks:
+      - "cmd-services"
+
+  cmd-services-test:
+    image: "registry.gitlab.com/clarin-eric/docker-tester:1.0.0"
+    command: --check-http http://cmd-services:5000/clarin/cmd/mapping
+    networks:
+      - "cmd-services"
+
+networks:
+  cmd-services:
+    external: false
