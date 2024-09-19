@@ -1,0 +1,2 @@
+FROM ghcr.io/knaw-huc/clarin-cmd-services:sha256-20aa90287d3b0646b858bb1adff28a687c019468d99f694083dc71049ad14364
+
